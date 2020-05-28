@@ -24,12 +24,16 @@ $('#search-btn1').on("click", function (event) {
   retreiveRecipie();
 })
 
-
-function retreiveRecipie() {
+function retreiveRecipie(query) {
+  
+  if (!query){
+    query = $('#recipe-value').val()
+  }
+  
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://recipe-puppy.p.rapidapi.com/?p=1&q=" + $('#recipe-value').val(),
+    "url": "https://recipe-puppy.p.rapidapi.com/?p=1&q=" + query,
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "recipe-puppy.p.rapidapi.com",
@@ -247,6 +251,7 @@ clicky.addEventListener("click", recentSearchList)
 
 
 
+
 function recentSearchList() {
   var searchString = searches.value
 
@@ -280,9 +285,14 @@ function updateRecentSearches() {
     button.textContent = element
     var br = document.createElement("br")
     button.setAttribute("class", "btn btn-danger button m-2")
+    button.addEventListener("click", updateRecentItemsUI)
     storedKeywords.prepend(br)
     storedKeywords.prepend(button)
   }
+}
+function updateRecentItemsUI(event){
+  var finalStep = event.target.textContent
+  retreiveRecipie(finalStep)
 }
 updateRecentSearches()
 
