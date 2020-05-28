@@ -1,19 +1,32 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 h1 {
     background: rgba(197, 77, 21, 0.966);
-    color: white;
-    height: 65px;
+    color: #ffffff;
+    height: 100px;
     margin-bottom: 0;
-    padding-top: 13px;
-    padding-bottom: 13px;
     font-weight: bolder;
-    border-top: solid rgba(196, 3, 3, 0.479);
-    border-bottom: solid rgba(196, 3, 3, 0.479);
+    font-size: 50px;
+    border-top: 3px solid #dc3545;
+    border-bottom: 3px solid #dc3545;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .title{
+    padding-top: 7px;
+}
+
+.fa-teeth-open {
     position: relative;
-    bottom: 6px;
+    bottom: 2px;
+    font-size: 15px;
+}
+
+#motto {
+    font-size: 12px;
+    margin-top: 7px;
 }
 
 .jumbo {
@@ -23,15 +36,15 @@ h1 {
     width: auto;
 }
 
-.screen-width {
+.recipe-column {
     margin-right: 0;
-    margin-top: 57px;
+    margin-top: 27px;
 
 }
 .left {
     margin-top: 30px;
     margin-right: 0;
-    padding-right: 0;
+    padding-right: 15px;
 }
 
 .slide {
@@ -48,7 +61,7 @@ h1 {
 }
 
 .hide {
-    display: none;
+    /* display: none; */
 }
 
 .stored {
@@ -58,6 +71,29 @@ h1 {
 .recipe-image {
     float: left;
 }
-.card-body {
-    float: left;
+
+#search-btn0 {
+    min-width: 258px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    background: #dc3545;
 }
+
+#search-btn3 {
+    min-width: 256px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(209, 74, 12, 0.966);
+}
+
+#recipe-value, #ingredients-value {
+    max-width: 252px;
+}
+
+
+
